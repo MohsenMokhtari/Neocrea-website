@@ -9,12 +9,13 @@ import ListItemText from '@material-ui/core/ListItemText';
 import iphone from '../src/assets/iphone.jpg'
 import macbookpro from '../src/assets/macbookpro.jpeg'
 
+
+
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
         paddingTop: 50,
         marginTop: -40,
-
     },
     paper: {
         padding: theme.spacing(2),
@@ -22,6 +23,7 @@ const useStyles = makeStyles(theme => ({
         fontSize: 20,
         padding: 50,
         color: theme.palette.text.secondary,
+
     },
     ul: {
         marginBottom: 30,
@@ -30,12 +32,16 @@ const useStyles = makeStyles(theme => ({
     },
     media: {
 
-        height: 15,
+        height: 25,
         paddingBottom: 400,
     },
     container: {
         display: "flex",
         alignItems: "stretch",
+    },
+    cover: {
+        width: 250,
+
     },
 
 }));
@@ -46,44 +52,38 @@ export default function FullWidthGrid() {
     return (
         <Fragment>
             <div className={classes.root}>
-                <Grid container spacing={2} elevation={10} style={{ padding: '1.5em' }}>
+                <Paper className={classes.paper}>
+                    <Grid item xs={8}>
+                        <ul className={classes.ul}>
+                        </ul>
+                        <ListItem>
+                            <ListItemText>Fast and Responsive</ListItemText>
+                        </ListItem>
 
-                    <Grid item xs={12} sm={6} container direction='row' spacing={2} alignItems="stretch">
-                        <Paper className={classes.paper} style={{ height: '80%', width: '80%' }}>
-                            <ul className={classes.ul}>
+                        <ListItem>
+                            <ListItemText>User friendly User Interface</ListItemText>
+                        </ListItem>
 
-                            </ul>
-                            <ListItem>
-                                <ListItemText>Fast and Responsive</ListItemText>
-                            </ListItem>
+                        <ListItem>
+                            <ListItemText>Clean Design</ListItemText>
+                        </ListItem>
 
-                            <ListItem>
-                                <ListItemText>User friendly User Interface</ListItemText>
-                            </ListItem>
+                        <ListItem>
+                            <ListItemText>Developed with privacy in mind</ListItemText>
+                        </ListItem>
 
-                            <ListItem>
-                                <ListItemText>Clean Design</ListItemText>
-                            </ListItem>
-
-                            <ListItem>
-                                <ListItemText>Developed with privacy in mind</ListItemText>
-                            </ListItem>
-
-                        </Paper>
-                    </Grid>
-                    <Grid item xs={12} sm={6} container direction='row' spacing={2} alignItems="stretch">
-                        <Paper className={classes.paper} style={{ height: '80%', width: '80%' }}>
-                            <Card className={classes.root}>
-                                <CardMedia
-                                    className={classes.media}
-                                    image={iphone}
-                                    title="iphone"
-                                />
-                            </Card>
-                        </Paper>
                     </Grid>
 
-                </Grid>
+                    <Grid item xs={4}>
+                        <Card className={classes.cover}>
+                            <CardMedia
+                                className={classes.media}
+                                image={iphone}
+                                title="iphone"
+                            />
+                        </Card>
+                    </Grid>
+                </Paper>
             </div >
 
             <div className={classes.root}>
@@ -95,11 +95,11 @@ export default function FullWidthGrid() {
 
                             </ul>
                             <ListItem>
-                                <ListItemText>Fast and Responsive</ListItemText>
+                                <ListItemText>Stunning UI on computers</ListItemText>
                             </ListItem>
 
                             <ListItem>
-                                <ListItemText>User friendly User Interface</ListItemText>
+                                <ListItemText>Fast and fluid</ListItemText>
                             </ListItem>
 
                             <ListItem>
@@ -107,7 +107,7 @@ export default function FullWidthGrid() {
                             </ListItem>
 
                             <ListItem>
-                                <ListItemText>Developed with privacy in mind</ListItemText>
+                                <ListItemText>Privacy driven</ListItemText>
                             </ListItem>
 
                         </Paper>
